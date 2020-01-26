@@ -23,11 +23,12 @@ export const highestRole = (member: Member) => {
  * @param member {Member | User} The member or user whose full tag you need.
  * @returns string The username#xxxx tag
  */
-export const tag = (member: Member | User) => {
+export const userTag = (member: Member | User) => {
   return `${member.username}#${member.discriminator}`
 }
 
 
 export default {
-  highestRole
+  highestRole,
+  userTag
 }
