@@ -1,4 +1,4 @@
-import { Member, Role } from 'eris'
+import { Member, Role, User } from 'eris'
 
 /**
  * Get the highest role of the member.
@@ -16,6 +16,15 @@ export const highestRole = (member: Member) => {
   }
 
   return memberHighestRole || (member.guild.roles.get(member.guild.id) as Role)
+}
+
+/**
+ * Get the username#xxxx tag for the member or user.
+ * @param member {Member | User} The member or user whose full tag you need.
+ * @returns string The username#xxxx tag
+ */
+export const tag = (member: Member | User) => {
+  return `${member.username}#${member.discriminator}`
 }
 
 
