@@ -2,12 +2,15 @@
   "name": "helperis",
   "version": "1.0.2",
   "description": "Helper functions for eris to make your life as a developer so much easier.",
-  "main": "index.js",
+  "main": "dist/index",
+  "typings": "dist/index",
   "files": [
     "dist/*"
   ],
   "scripts": {
-    "prepack": "tsc --declaration"
+    "build": "tsc -p .",
+    "prepack": "tsc --declaration",
+    "deploy": "npm version patch && npm publish"
   },
   "repository": {
     "type": "git",
