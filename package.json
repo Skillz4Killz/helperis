@@ -1,6 +1,6 @@
 {
   "name": "helperis",
-  "version": "1.0.5",
+  "version": "1.1.0",
   "description": "Helper functions for eris to make your life as a developer so much easier.",
   "main": "dist/index",
   "typings": "dist/index",
@@ -37,9 +37,7 @@
     "prettier": "^1.19.1"
   },
   "peerDependencies": {
-    "eris": "^0.11.2"
-  },
-  "dependencies": {
+    "eris": "^0.11.2",
     "typescript": "^3.7.5"
   }
 }
