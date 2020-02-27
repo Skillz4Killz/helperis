@@ -27,8 +27,19 @@ export const userTag = (member: Member | User) => {
   return `${member.username}#${member.discriminator}`
 }
 
+/**
+ * Set the nickname for a member. Reason is optional.
+ * @param member {Member} The member whose nickname you wish to edit.
+ * @param nickname string The new nickname to give the user
+ * @param reason string The reason to add to the audit logs
+ */
+export const setNickname = (member: Member, nickname: string, reason?: string) => {
+  member.edit({ nick: nickname }, reason)
+}
+
 
 export default {
   highestRole,
-  userTag
+  userTag,
+  setNickname
 }
