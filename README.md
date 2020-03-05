@@ -35,11 +35,29 @@ const embed = new MessageEmbed()
 	.setTitle('The title of the embed', 'URL to open if the title is clicked OPTIONAL')
 	.setThumbnail('The URL of the thumbnail')
 
-	// Since Eris accepts JSON code only, we give eris a code for this embed
-	return message.channel.createMessage({ embed: embed.code })
+// Since Eris accepts JSON code only, we give eris a code for this embed
+return message.channel.createMessage({ embed: embed.code })
 ```
 
 ## Member Functions
+
+```ts
+const { highestRole, setNickname } = require('helperis')
+
+const highestRole = highestRole(member)
+
+setNickname(member, 'newNick', 'Reason to set nickname)
+```
+
+```ts
+// If you want to use multiple methods
+const Helperis from 'helperis'
+
+const highestRole = Helperis.member.highestRole(member)
+const botsHighestRole = Helperis.member.highestRole(botMember)
+
+if (highestRole.position < botsHighestRole.position) Helperis.member.setNickname(member, 'newNick', 'Reason to set nickname')
+```
 
 **highestRole(member)**: Eris does not provide any easy way to figure out what the highest role of the member is. This is where this function is so useful.
 
