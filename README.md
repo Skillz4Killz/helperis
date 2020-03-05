@@ -46,12 +46,12 @@ const { highestRole, setNickname } = require('helperis')
 
 const highestRole = highestRole(member)
 
-setNickname(member, 'newNick', 'Reason to set nickname)
+setNickname(member, 'newNick', 'Reason to set nickname')
 ```
 
 ```ts
 // If you want to use multiple methods
-const Helperis from 'helperis'
+const Helperis = require('helperis')
 
 const highestRole = Helperis.member.highestRole(member)
 const botsHighestRole = Helperis.member.highestRole(botMember)
