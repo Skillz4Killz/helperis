@@ -34,7 +34,24 @@ export const userTag = (member: Member | User) => {
  * @param reason string The reason to add to the audit logs
  */
 export const setNickname = (member: Member, nickname: string, reason?: string) => {
-  member.edit({ nick: nickname }, reason)
+  if (member.guild.shard.client.user.id === member.id) {
+    return member.guild.shard.client.editNickname(member.guild.id, nickname, reason)
+  }
+
+  return member.edit({ nick: nickname }, reason)
+}
+
+/**
+ * Reset the nickname for a member. Reason is optional.
+ * @param member {Member} The member whose nickname you wish to reset.
+ * @param reason string The reason to add to the audit logs
+ */
+export const resetNickname = (member: Member, reason?: string) => {
+  if (member.guild.shard.client.user.id === member.id) {
+    return member.guild.shard.client.editNickname(member.guild.id, '', reason)
+  }
+
+  return member.edit({ nick: '' }, reason)
 }
 
 
