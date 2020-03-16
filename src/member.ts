@@ -54,6 +54,13 @@ export const resetNickname = (member: Member, reason?: string) => {
   return member.edit({ nick: '' }, reason)
 }
 
+/**
+ * Get the color of a member. Checks the highest role's color.
+ * @param member {Member} The member whose color you wish to check.
+ */
+export const displayColor = (member: Member) => {
+  return highestRole(member).color
+}
 
 export default {
   highestRole,
