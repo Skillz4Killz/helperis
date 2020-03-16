@@ -57,9 +57,12 @@ export const resetNickname = (member: Member, reason?: string) => {
 /**
  * Get the color of a member. Checks the highest role's color.
  * @param member {Member} The member whose color you wish to check.
+ * @param hex {boolean} Whether you want to have a ##### hex color string returned as opposed to a number.
  */
-export const displayColor = (member: Member) => {
-  return highestRole(member).color
+export const displayColor = (member: Member, hex = false) => {
+  const role = highestRole(member)
+
+  return hex ? role.color.toString(16).toUpperCase() : role.color
 }
 
 export default {
