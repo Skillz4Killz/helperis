@@ -10,7 +10,8 @@
   "scripts": {
     "build": "tsc -p .",
     "prepack": "tsc --declaration",
-    "deploy": "npm version patch && npm publish"
+    "patch": "npm version patch && npm publish",
+    "minor": "npm version minor && npm publish"
   },
   "repository": {
     "type": "git",
