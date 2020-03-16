@@ -1,6 +1,6 @@
 {
   "name": "helperis",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "description": "Helper functions for eris to make your life as a developer so much easier.",
   "main": "dist/index",
   "typings": "dist/index",
