@@ -9,7 +9,7 @@ const embedLimits = {
   total: 6000
 }
 
-export const MessageEmbed = class {
+export class MessageEmbed {
   /** The amount of characters in the embed. */
   currentTotal = 0
   /** Whether the limits should be enforced or not. */
