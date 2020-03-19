@@ -9,7 +9,7 @@ const embedLimits = {
   total: 6000
 }
 
-export default class MessageEmbed {
+class MessageEmbed {
   /** The amount of characters in the embed. */
   currentTotal = 0
   /** Whether the limits should be enforced or not. */
@@ -165,3 +165,5 @@ export interface EmbedCode {
   thumbnail?: EmbedImage
   url?: string
 }
+
+export default MessageEmbed
