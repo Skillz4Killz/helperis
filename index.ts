@@ -1,6 +1,6 @@
 // Import all necessary things
 import MemberHelpers from './src/member'
-import MessageEmbed from './src/MessageEmbed'
+import { MessageEmbed } from './src/MessageEmbed'
 
 export * from './src/member'
 export * from './src/MessageEmbed'
