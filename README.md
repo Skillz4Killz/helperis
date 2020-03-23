@@ -23,7 +23,7 @@ const embed = new MessageEmbed()
 	.addBlankField(true)
 	// Adds a blank field that is NOT inline. (You can skip the `false`)
 	.addBlankField()
-	// Attach a field
+	// Attach a file to the embed image
 	.attachFile(buffer, 'filename.png')
 	.setFooter('The text in the footer', 'Icon URL Here Optional')
 	// This will overwrite the attachFile but this is just an example to show you all the methods available.
@@ -67,3 +67,4 @@ if (highestRole.position < botsHighestRole.position) Helperis.member.setNickname
 
 **resetNickname(member, reason)**: An easy way to reset a member or the bots nickname. Reason is optional.
 
+**displayColor(member)**: Get the members color that is being displayed based on their highest role. Returns a number for the color. To get a hex color string pass `true` as the second argument like: `displayColor(member, true)`
